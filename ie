@@ -1,0 +1,515 @@
+num = int(input("Enter the value of num : ")) 
+pi = float(input("Enter the value of p i : ")) 
+name = str(input("Enter your name : ")) 
+compvalue=complex(input("Enter the complex value :")) 
+boolean=bool(input("Enter the boolean value :")) 
+nonetype=None 
+#Print the values of variables 
+print("\nEntered integer value is =",num) 
+print("\nEntered pi value is =",pi) 
+print("\nEntered name is =",name) 
+print("\nEntered complex value is =",compvalue) 
+print("\nEntered boolean value is =",boolean) 
+print("\nNoneType value is =",nonetype)
+qty = float(input("Enter the quantity of item sold : "))  
+val = float(input("Enter the value of item: ")) 
+discountpercent = float(input ("Enter the discount percentage : "))  
+taxpercent = float (input ("Enter the tax : ")) 
+grossamt = qty*val 
+discountamt = (discountpercent/100)*grossamt 
+subtotal = grossamt-discountamt 
+taxamt = (taxpercent/100)*subtotal 
+netamt = subtotal + taxamt 
+print("**********BILL************") 
+print("Quantity sold : \t",qty)  
+print("Price per item : \t",val) 
+print("\n\t\t\t ----------")  
+print("Gross Amount : \t\t" , grossamt) 
+print("Discount :\t\t-", discountamt) 
+print("\t\t\t ---------- ")  
+print("Discounted Sub Total : \t " , subtotal)  
+print("Tax :\t\t\t+",taxamt) 
+print( " \t\t\t -----------") 
+print("Total net amount to be paid ",netamt)
+import math 
+a = float(input("Enter the coefficient a: ")) 
+b = float(input("Enter the coefficient b: ")) 
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 10 
+ 
+ 
+c = float(input("Enter the coefficient c: ")) 
+discriminant = b*b - 4*a*c 
+if a == 0: 
+    print("This is not a quadratic equation, 'a' should not be 0.") 
+else: 
+    if discriminant > 0: 
+        root1 = (-b + math.sqrt(discriminant)) / (2 * a) 
+        root2 = (-b - math.sqrt(discriminant)) / (2 * a) 
+        print("The equation has real and distinct roots\n") 
+        print("Root 1=",root1) 
+        print("Root 2=",root2) 
+    elif discriminant == 0: 
+        root = -b / (2 * a) 
+        print("The equation has real and equal roots: ",root) 
+    else: 
+        real_part = -b / (2 * a) 
+        imaginary_part = math.sqrt(abs(discriminant)) / (2 * a) 
+        print("The equation has real and complex roots") 
+        print("Root1=",real_part,"+",imaginary_part,"i") 
+        print("Root2=",real_part,"-",imaginary_part,"i")
+n = int(input("Enter the number : "))  
+s=0 
+for i in range(1,n+1): 
+    if(i%2 == 0):  
+        term = i*i 
+    else:  
+        term=0 
+    s = s+term 
+print ("The sum of squares of even number less than", n, "is", s)
+username=input("Enter Name:") 
+if username.isalpha()==False: 
+    print("Invalid Input") 
+else: 
+    pan=input("Enter PAN:") 
+    if len(pan)==10 and pan[0:5].isalpha()==True and pan[5:9].isdigit()==True and pan[9].isalpha()==True: 
+        print("Name is ",username) 
+        print("PAN is ",pan) 
+    else: 
+        print("Invalid Input")
+# List methods 
+def list_methods_demo(): 
+    # Initialize a list 
+    my_list = [1, 2, 3, 4, 5] 
+    # Append method 
+    my_list.append(6) 
+    print("Append method:", my_list) 
+    # Extend method 
+    my_list.extend([7, 8, 9]) 
+    print("Extend method:", my_list) 
+    # Insert method 
+    my_list.insert(2, 10) 
+    print("Insert method:", my_list) 
+    # Remove method 
+    my_list.remove(3) 
+print("Remove method:", my_list) 
+    # Pop method 
+    popped_element = my_list.pop() 
+    print("Popped element using pop method:", popped_element) 
+ 
+# Tuple methods 
+def tuple_methods_demo(): 
+    # Initialize a tuple 
+    my_tuple = (16, 12, 35, 4, 52, 4) 
+    # Index method 
+    index = my_tuple.index(35) 
+    print("Index of element 35:", index) 
+    # Count method 
+    count = my_tuple.count(4) 
+    print("Count of element 4:", count)    
+    # sorted function 
+    print("Sorted elements are:", sorted(my_tuple))    
+    # min function 
+    print("Minimum element is:", min(my_tuple))     
+    # sum function 
+    print("Sum of elements is:", sum(my_tuple)) 
+    print("Updated dictionary using update method:", my_dict) 
+# Set methods 
+def set_methods_demo(): 
+    # Initialize a set 
+    my_set = {1, 2, 3, 4, 5} 
+    # Add method 
+    my_set.add(6) 
+    print("Add method:", my_set) 
+    # Remove method 
+    my_set.remove(3)
+   print("Remove method:", my_set)  
+    # Discard method 
+    my_set.discard(4) 
+    print("Discard method:", my_set) 
+    # Pop method 
+    popped_element = my_set.pop() 
+    print("Popped element using pop method:", popped_element)    
+    # Clear method 
+    my_set.clear() 
+    print("Clear method:", my_set) 
+ 
+# Dictionary methods 
+def dictionary_methods_demo(): 
+    # Initialize a dictionary 
+    my_dict = {'a': 1, 'b': 2, 'c': 3} 
+    # Get method 
+    value = my_dict.get('b') 
+    print("Value for key 'b' using get method:", value) 
+    # Pop method 
+    popped_value = my_dict.pop('c') 
+    print("Popped value for key 'c' using pop method:", popped_value) 
+    # Update method 
+    my_dict.update({'d': 4}) 
+    print("Updated dictionary using update method:", my_dict) 
+    # keys method 
+    print("Using keys method:", my_dict.keys())  
+    # values method 
+    print("Using values method:", my_dict.values()) 
+    # items method 
+    print("Using items method:", my_dict.items()) 
+ 
+# Main function 
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 27 
+ 
+ 
+def main(): 
+    print("List methods:") 
+    list_methods_demo() 
+    print("\nTuple methods:") 
+    tuple_methods_demo() 
+    print("\nSet methods:") 
+    set_methods_demo() 
+    print("\nDictionary methods:") 
+    dictionary_methods_demo()
+class Account: 
+    def _ _init_ _(self):  
+        self.balance = 0 
+        print( 'New Account Created.') 
+         
+    def deposit(self): 
+        amount = float(input('Enter amount to deposit : '))  
+        self.balance += amount 
+        print( 'New Balance : %f' %self.balance) 
+         
+    def withdraw(self): 
+        amount = float(input('Enter amount to withdraw : '))  
+        if(amount > self.balance): 
+            print( 'Insufficient balance') 
+        else: 
+            self.balance -= amount 
+            print ('New Balance : %f' %self.balance) 
+             
+    def enquiry(self): 
+        print( 'Balance : %f' %self.balance) 
+account = Account()  
+account.deposit()  
+account.withdraw()  
+account.enquiry()
+class Person: 
+    def __init__(self, name, age, gender): 
+        self.name = name  
+        self.age = age 
+        self.gender = gender 
+    def display(self) : 
+        print ("NAME : ", self.name)  
+        print("AGE: ", self.age)  
+        print("GENDER : ", self.gender ) 
+class Publications: 
+    def __init__(self, no_RP, no_Books, no_Art): 
+        self.no_RP = no_RP  
+        self.no_Books = no_Books  
+        self.no_Art = no_Art 
+    def display(self): 
+        print ("Number of Research papers Published: ", self.no_RP)  
+        print("Number of Books Published: ", self.no_Books) 
+        print ("Number of Articles Published : " , self.no_Art) 
+class Faculty(Person): 
+    def __init__(self, name, age, sex, desig, dept, no_RP, no_Books, no_Art):  
+        Person.__init__(self, name, age, gender) 
+        self.desig = desig  
+        self.dept = dept 
+        self.Pub = Publications(no_RP, no_Books, no_Art)  
+    def display(self): 
+        Person.display(self) 
+        print ("DESIGNATION: ", self.desig) 
+        print ("DEPARTMENT: ", self.dept)  
+        self.Pub.display() 
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 33 
+ 
+ 
+F = Faculty("Pooja",38,"Female","TIC","Computer Science",22,1,3) 
+def GCD(num, deno):  
+    if(deno == 0): 
+        return num 
+    else: 
+        return GCD(deno,num%deno)  
+class Fraction: 
+    def __init__(self):  
+        self.num = 0 
+        self.deno = 1  
+    def get(self): 
+        self.num = int(input ("Enter the numerator : "))  
+        self.deno = int(input("Enter the denominator : "))  
+    def simplify(self): 
+        common_divisor = GCD(self.num, self.deno) 
+        self.num //= common_divisor 
+        self.deno //= common_divisor 
+    def __add__(self, F): 
+        Temp = Fraction() 
+        Temp.num = (self.num * F.deno) + (F.num * self .deno)  
+        Temp.deno = self.deno * F.deno 
+        return Temp  
+    def display(self): 
+        self.simplify() 
+        print(self.num, "/", self.deno)  
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 36 
+ 
+ 
+F1 = Fraction() 
+F1.get() 
+F2 = Fraction() 
+F2.get() 
+F3 = Fraction() 
+F3 = F1 + F2 
+print ("RESULTANT FRACTION IS : ")  
+F3.display() 
+OUTPUT DATA: 
+Enter the numerator : 4 
+Enter the denominator : 10 
+Enter the numerator : 2 
+Enter the denominator : 5 
+RESULTANT FRACTION IS :  
+4 / 5 
+class Book: 
+    def __init__(self): 
+        self.title = input('Enter the title: ') 
+        self.author = input('Enter the author: ') 
+        self.publisher = input('Enter the publisher: ') 
+        self.isbn_number = input('Enter the ISBN number: ') 
+ 
+    def read_data(self): 
+        self.title = input('Enter the title: ') 
+        self.author = input('Enter the author: ') 
+        self.publisher = input('Enter the publisher: ') 
+        self.isbn_number = input('Enter the ISBN number: ') 
+ 
+    def display_data(self): 
+        print('Title: {}'.format(self.title)) 
+        print('Author: {}'.format(self.author)) 
+        print('Publisher: {}'.format(self.publisher)) 
+        print('ISBN number: {}'.format(self.isbn_number)) 
+ 
+def main(): 
+    book = Book() 
+    book.display_data() 
+    print() 
+    book.read_data() 
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 40 
+ 
+ 
+    book.display_data() 
+ 
+if __name__ == '__main__': 
+    main()
+class Vehicle(ABC): 
+    @abstractmethod 
+    def __init__(self, name, num_wheels): 
+        self.name = name 
+        self.num_wheels = num_wheels 
+ 
+    @abstractmethod 
+    def display_details(self): 
+        pass 
+ 
+class Car(Vehicle): 
+    def __init__(self, name, num_doors): 
+        super().__init__(name, 4) 
+        self.num_doors = num_doors 
+ 
+    def display_details(self): 
+        print('Name: {}'.format(self.name)) 
+        print('Number of wheels: {}'.format(self.num_wheels)) 
+        print('Number of doors: {}'.format(self.num_doors)) 
+ 
+class Motorcycle(Vehicle): 
+    def __init__(self, name, has_sidecar): 
+        super().__init__(name, 2) 
+        self.has_sidecar = has_sidecar 
+ 
+    def display_details(self): 
+        print('Name: {}'.format(self.name)) 
+        print('Number of wheels: {}'.format(self.num_wheels)) 
+        print('Has sidecar: {}'.format(self.has_sidecar))
+class Truck(Vehicle): 
+    def __init__(self, name, payload_capacity): 
+        super().__init__(name, 6) 
+        self.payload_capacity = payload_capacity 
+ 
+    def display_details(self): 
+        print('Name: {}'.format(self.name)) 
+        print('Number of wheels: {}'.format(self.num_wheels)) 
+        print('Payload capacity: {}'.format(self.payload_capacity)) 
+ 
+def main(): 
+    car = Car('Honda Civic', 4) 
+    car.display_details() 
+    print() 
+ 
+    motorcycle = Motorcycle('Harley Davidson', False) 
+    motorcycle.display_details() 
+    print() 
+ 
+    truck = Truck('Ford F-150', 3000) 
+    truck.display_details() 
+ 
+if __name__ == '__main__':
+import calendar 
+ 
+def add(x, y): 
+    return x + y 
+ 
+def subtract(x, y): 
+    return x - y 
+ 
+def multiply(x, y): 
+    return x * y 
+ 
+def divide(x, y): 
+    if y == 0: 
+        raise ValueError("Cannot divide zero") 
+    return x / y 
+ 
+def calculate(): 
+    print('Please type in the math operation you would like to complete:') 
+    print('+ for addition') 
+    print('- for subtraction') 
+    print('* for multiplication') 
+    print('/ for division') 
+ 
+    operation = input() 
+ 
+    num1 = float(input('Enter your first number: ')) 
+    num2 = float(input('Enter your second number: ')) 
+ 
+    if operation == '+': 
+        print('{} + {} = '.format(num1, num2)) 
+        print(add(num1, num2)) 
+OBJECT ORIENTED PROGRAMMING LABORATORY Page 44 
+ 
+ 
+ 
+    elif operation == '-': 
+        print('{} - {} = '.format(num1, num2)) 
+        print(subtract(num1, num2)) 
+ 
+    elif operation == '*': 
+        print('{} * {} = '.format(num1, num2)) 
+        print(multiply(num1, num2)) 
+ 
+    elif operation == '/': 
+        print('{} / {} = '.format(num1, num2)) 
+        print(divide(num1, num2)) 
+ 
+    else: 
+        print('You have not typed a valid operator, please run the program again.') 
+ 
+def again(): 
+    calc_again = input('Do you want to calculate again? Please type Y for YES or N for 
+NO.\n') 
+    if calc_again.upper() == 'Y': 
+        calculate() 
+    elif calc_again.upper() == 'N': 
+        print('See you later.') 
+    else: 
+        again() 
+ 
+def welcome(): 
+    print('Welcome to Calculator') 
+ 
+def year_wise_calendar(): 
+    year = int(input('Enter the year: ')) 
+ 
+    print(calendar.calendar(year))
+while True: 
+    print("\n1. Calculator") 
+    print("2. Year-wise Calendar") 
+    print("3. Exit") 
+ 
+    choice = input("Enter your choice: ") 
+ 
+    if choice == '1': 
+        calculate() 
+        again() 
+    elif choice == '2': 
+        year_wise_calendar() 
+    elif choice == '3': 
+        print('See you later.') 
+        break 
+    else: 
+        print('You have not typed a valid choice, please try again.') 
+class Solution {
+ public:
+  int maxProfit(vector<int>& prices) {
+    int sellOne = 0;
+    int holdOne = INT_MIN;
+
+    for (const int price : prices) {
+      sellOne = max(sellOne, holdOne + price);
+      holdOne = max(holdOne, -price);
+    }
+
+    return sellOne;
+  }
+};
+class Solution {
+ public:
+  vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> ans;
+
+    for (int i = 0; i < numRows; ++i)
+      ans.push_back(vector<int>(i + 1, 1));
+
+    for (int i = 2; i < numRows; ++i)
+      for (int j = 1; j < ans[i].size() - 1; ++j)
+        ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j];
+
+    return ans;
+  }
+};
+class Solution {
+ public:
+  int maxProfit(vector<int>& prices) {
+    int sellOne = 0;
+    int holdOne = INT_MIN;
+
+    for (const int price : prices) {
+      sellOne = max(sellOne, holdOne + price);
+      holdOne = max(holdOne, -price);
+    }
+
+    return sellOne;
+  }
+};
+class Solution {
+ public:
+  vector<int> getRow(int rowIndex) {
+    vector<int> ans(rowIndex + 1, 1);
+
+    for (int i = 2; i < rowIndex + 1; ++i)
+      for (int j = 1; j < i; ++j)
+        ans[i - j] += ans[i - j - 1];
+
+    return ans;
+  }
+};
+class Solution {
+ public:
+  vector<vector<int>> generate(int numRows) {
+    vector<vector<int>> ans;
+
+    for (int i = 0; i < numRows; ++i)
+      ans.push_back(vector<int>(i + 1, 1));
+
+    for (int i = 2; i < numRows; ++i)
+      for (int j = 1; j < ans[i].size() - 1; ++j)
+        ans[i][j] = ans[i - 1][j - 1] + ans[i - 1][j];
+
+    return ans;
+  }
+};
+
+
+
+ 
+ 
+ 
+
+
+
+
+
